@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,48 +11,96 @@
   <div class="container">
 
     <h1 class="logo">VIOLEX</h1>
-    <p>Watch the World Create</p>
+    <p class="tagline">Watch the World Create</p>
 
-    <input placeholder="Email">
-    <input type="password" placeholder="Password">
+    <div class="auth-box">
 
-    <button>LOG IN</button>
+      <h2>Login</h2>
+
+      <label>Email</label>
+      <input type="text" placeholder="Enter your email">
+
+      <label>Password</label>
+      <input type="password" placeholder="Enter your password">
+
+      <button class="btn">LOG IN</button>
+
+      <p class="switch">Don’t have an account? <span>Sign Up</span></p>
+
+    </div>
 
   </div>
 
-  <script src="script.js"></script>
 </body>
 </html>
 body {
   margin: 0;
   font-family: Arial;
-  background: linear-gradient(135deg, black, #00ff66);
+  background: linear-gradient(135deg, #000000, #00ff66);
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+.container {
   text-align: center;
 }
 
 .logo {
   color: #00ff66;
-  font-size: 50px;
-  letter-spacing: 3px;
+  font-size: 55px;
+  letter-spacing: 4px;
+}
+
+.tagline {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.auth-box {
+  background: rgba(0,0,0,0.75);
+  padding: 25px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 0 20px #00ff66;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.8;
 }
 
 input {
-  display: block;
-  margin: 10px auto;
+  width: 100%;
   padding: 10px;
-  width: 220px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 6px;
 }
 
-button {
+.btn {
+  width: 100%;
+  margin-top: 15px;
   padding: 10px;
-  width: 240px;
   background: #00ff66;
   border: none;
+  font-weight: bold;
   cursor: pointer;
+  border-radius: 6px;
 }
-console.log("Violex is running");
+
+.switch {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.switch span {
+  color: #00ff66;
+  cursor: pointer;
+  
+}
